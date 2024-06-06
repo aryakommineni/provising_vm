@@ -8,6 +8,16 @@ This example shows creating a provisioning dialog that modifies provisioning par
 
 Set the ManageIQ provisioning service entry point to this script. For example, this workflow is run for every provisioned Virtual Machine (VM), and modifies the VM size.
 
+## Create a workflow (optional)
+
+1. Fork `https://github.com/ManageIQ/workflows-examples` or create your own
+2. Clone the repo locally: `git clone https://github.com/$USERNAME/workflows-examples`
+3. Create a new branch (e.g.: `git checkout -b sm-md-lg`)
+3. Create or edit a script. (In our example, we are using `provision-vm-small-med-large.asl`)
+4. Push code changes to your branch
+5. Add a Workflow repository pointing to your fork (make sure to change the branch)
+6. Choose this new file for the rest of the instructions. Otherwise, just choose the pre created script
+
 ## Add a Workflow Repository
 
 1. **Click Automation** > **Embedded Workflows** > **Repositories**.
@@ -15,6 +25,8 @@ Set the ManageIQ provisioning service entry point to this script. For example, t
 3. Provide the `Name` and `URL` for the repository:
    - **Name**: Local name to identify this repository. For example, `Example Workflows`.
    - **Url**: Git repository URL. For example, `https://github.com/ManageIQ/workflows-examples`.
+   - **SCM Branch**: Git repository branch name. For example, leave blank for running this demo
+     or use a branch name like `sm-md-lg` if you are editing this example.
 4. Click **Save**.
 
 ## Create a Provisioning Dialog
@@ -77,3 +89,14 @@ Set the ManageIQ provisioning service entry point to this script. For example, t
    - **VM name**: Name for the newly created vm. For example `demo-1`.
    - **size**: The desired vm size. For example, **small**.
 1. Click **Submit**
+
+## Iterate
+
+If the provisioning did not go as planned:
+
+1. Edit the script.
+2. Push code changes to your branch
+3. Refresh the Workflow Repository
+4. You can follow the workflows link to view the version of the script that the server has.
+5. If you changed the script name, edit the Service Catalog Item
+6. Provision the vm again.

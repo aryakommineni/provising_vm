@@ -29,8 +29,6 @@ Use the following sections and follow them in order to provision a VM service an
    ```
 3. Create your own script or edit the existing script that is provided. The script used in this example is `provision-vm-small-med-large.asl`.
 4. Push code changes to your branch.
-5. Add a Workflow repository pointing to your fork. Make sure to change the branch.
-6. Choose this new script file for the rest of the instructions.
 
 ## Add a Workflow Repository
 

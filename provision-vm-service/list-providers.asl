@@ -16,7 +16,7 @@
         "API_URL.$": "$$.Execution._manageiq_api_url",
         "VERIFY_SSL.$": "$.dialog.dialog_verify_ssl",
 
-        "PROVIDER_TYPE": "ManageIQ::Providers::Vmware::InfraManager"
+        "PROVIDER_TYPE": "ManageIQ::Providers::Google::InfraManager"
       }
     }
   }
